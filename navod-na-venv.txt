@@ -1,0 +1,8 @@
+Programovani prikazy venv (py)
+1. & "g:/win32app/Portable Python-3.13.3 x64/python.exe" -m venv venv
+2. Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+3. .\venv\Scripts\activate
+
+
+pip install -r requirements.txt
+= nainstaluji se vsechny knihovny ze seznamu
