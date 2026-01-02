@@ -3,6 +3,13 @@ Programovani prikazy venv (py)
 2. Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 3. .\venv\Scripts\activate
 
+Install venv on mac:
+python3 -m pip install virtualenv
+python3 -m virtualenv venv # create a new venv in ./venv
+source ./venv/bin/activate # activate your new venv
 
+Install all libraries:
 pip install -r requirements.txt
-= nainstaluji se vsechny knihovny ze seznamu
+
+Disable all AI features:
+settings => "chat.disableAIFeatures" = true
