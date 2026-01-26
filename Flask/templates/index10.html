@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Parametry z adresy</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css')}}">
+    </head>
+    <body>
+        <form method="post">
+            <label for="number">Zadej číslo:</label>
+            <input type="number" name="number">
+            <button type="submit">Odeslat</button>
+        </form>
+        {% if result is not none %}
+        <h2>Výsledek: {{ result }}</h2>
+    {% endif %}
+    </body>
+    </html>
