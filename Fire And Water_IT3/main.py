@@ -1,9 +1,7 @@
 import pygame
 from settings import *
 from Level import Level
-from Fireboy import *
-
-
+from Fireboy import Fireboy
 pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Fire and Water Game")
@@ -18,7 +16,6 @@ level = Level()
 fireboy = Fireboy(100, 760)
 players_group = pygame.sprite.Group()
 players_group.add(fireboy)
-
 def draw_level():
     pocet_radku = len(level.level_data)
     pocet_sloupcu = len(level.level_data[0])
@@ -29,7 +26,6 @@ def draw_level():
                 screen.blit(dirt_image, (sloupec * TILE_SIZE, radek * TILE_SIZE))
             if level.level_data[radek][sloupec] == 2:  # lava tile
                 screen.blit(lava_image, (sloupec * TILE_SIZE, radek * TILE_SIZE))
-
 
 running = True
 while running:

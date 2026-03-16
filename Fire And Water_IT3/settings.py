@@ -18,4 +18,6 @@ LAVA_IMAGE_PATH = "Assets/ohen a voda/lava/1.png"
 #fireboy settings
 FIREBOY_IDLE_IMAGE_PATH = "Assets/ohen a voda/boy_still/{}.png"
 FIREBOY_RIGHT_IMAGE_PATH = "Assets/ohen a voda/boy_right/{}.png"
-FIREBOY_SCALE = 1.15
+FIREBOY_SCALE = 0.15
+GRAVITY = 0.5
+JUMP_FORCE = -10
