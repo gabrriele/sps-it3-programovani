@@ -60,20 +60,17 @@ class Fireboy(pygame.sprite.Sprite):
         if keys[pygame.K_SPACE] and self.on_ground:
             self.velocity_y = self.jump_strength
             self.on_ground = False
-
         self.velocity_y += self.gravity
         self.rect.y += self.velocity_y
-
         if self.rect.bottom >= self.ground_y:
             self.rect.bottom = self.ground_y
             self.velocity_y = 0
             self.on_ground = True
 
-
+        #Animations
         self.animation_index += 0.1
         if self.animation_index >= len(self.animations[self.current_animation]):
             self.animation_index = 0
-
         self.image = self.animations[self.current_animation][int(self.animation_index)]
 
 
