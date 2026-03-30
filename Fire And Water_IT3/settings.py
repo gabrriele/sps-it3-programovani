@@ -21,3 +21,7 @@ FIREBOY_RIGHT_IMAGE_PATH = "Assets/ohen a voda/boy_right/{}.png"
 FIREBOY_SCALE = 0.15
 GRAVITY = 0.5
 JUMP_FORCE = -10
+
+#watergirl settings
+WATERGIRL_IDLE_IMAGE_PATH = "Assets/ohen a voda/girl_still/{}.png"
+WATERGIRL_RIGHT_IMAGE_PATH = "Assets/ohen a voda/girl_right/{}.png"

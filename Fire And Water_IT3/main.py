@@ -17,8 +17,6 @@ fireboy = Fireboy(100, 760)
 players_group = pygame.sprite.Group()
 players_group.add(fireboy)
 
-#todo - collision w/ objects, watergirl (dědí od fireboye)
-
 def draw_level():
     pocet_radku = len(level.level_data)
     pocet_sloupcu = len(level.level_data[0])
@@ -38,7 +36,7 @@ while running:
             running = False
     
     screen.fill(BLACK)
-    players_group.update()
+    players_group.update(level)
     players_group.draw(screen)
     draw_level()
     pygame.display.flip()
