@@ -1,25 +1,23 @@
 import unittest
 
-def text_na_velka(text):
-    if isinstance(text, str):
-        return text.upper()
-    else:
-        raise TypeError
+
+def je_sude(n):
+    return n % 2 == 0
 
 
-class TestObsahujeJenPismena(unittest.TestCase):
-    def test_mala_na_velka(self):
-        self.assertEqual(text_na_velka("abc"),"ABC")
+# TODO: Úloha 1
+class TestJeSude(unittest.TestCase):
+    def test_kladne_sude(self):
+        self.assertEqual(je_sude(4), True)
 
-    def test_uz_velka(self):
-        self.assertEqual(text_na_velka("NEZKLAMU VÁS!"), "NEZKLAMU VÁS!")
+    def test_kladne_liche(self):
+        self.assertEqual(je_sude(3), True)
 
-    def test_smiseny_text(self):
-        self.assertEqual(text_na_velka("čAu liDi"), "ČAU LIDI")
+    def test_nula(self):
+        self.assertEqual(je_sude(0), True)
 
-    def test_cislo(self):
-        with self.assertRaises(TypeError):
-            text_na_velka(99)
+    def test_zaporne_liche(self):
+         self.assertEqual(je_sude(-3), False)
 
 
 
